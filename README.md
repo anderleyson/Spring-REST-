@@ -4,9 +4,9 @@ Isso serve para desacoplar as classes, evitando dependência direta entre elas.
 
 Os resultados são:
 
-    -Maior índice de reaproveitamento
-    -Permite incluir novas funcionalidades sem alterar as já existentes
-    -Possibilidade de criar mocks em testes unitários
+    Maior índice de reaproveitamento
+    Permite incluir novas funcionalidades sem alterar as já existentes
+    Possibilidade de criar mocks em testes unitários
 
 
 
@@ -15,7 +15,8 @@ Os resultados são:
 Vou ilustrar um caso simples de Injeção de Dependências sem necessidade de um container ou framework.
 Suponha que você tem um sistema que processa pagamentos e implementa um método da seguinte forma:
 
-`class Pagamento {
+`
+class Pagamento {
 
     void efetuarPagamento(String tipo, Integer codigo, Double valor) {
         if ("BOLETO".equals(tipo)) {
@@ -27,13 +28,15 @@ Suponha que você tem um sistema que processa pagamentos e implementa um método
         }
     }
 
-}`
+}
+`
 
 Note que o método instancia diretamente várias classes. Isso é muito ruim porque o código fica todo acoplado e é necessário realizar manutenção sempre que alguma implementação mudar.
 
 Podemos refatorar esse código de forma que o algoritmo fique mais genérico. Vejamos:
 
-`class Pagamento {
+`
+class Pagamento {
 
     IntegracaoBanco integracaoBanco;
 
@@ -45,7 +48,8 @@ Podemos refatorar esse código de forma que o algoritmo fique mais genérico. Ve
         integracaoBanco.pagar(codigo, valor);
     }
 
-}`
+}
+`
 
 Aqui, IntegracaoBanco é uma interface e pode receber várias implementações. Além disso, classe agora exige que uma dessas implementações seja passada no construtor.
 
