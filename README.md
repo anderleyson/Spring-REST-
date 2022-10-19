@@ -36,7 +36,7 @@ Note que o método instancia diretamente várias classes. Isso é muito ruim por
 Podemos refatorar esse código de forma que o algoritmo fique mais genérico. Vejamos:
 
 `
-    class Pagamento {
+    class Pagamento { `
 
         IntegracaoBanco integracaoBanco;
 
@@ -48,8 +48,7 @@ Podemos refatorar esse código de forma que o algoritmo fique mais genérico. Ve
             integracaoBanco.pagar(codigo, valor);
         }
 
-    }
-`
+    `}`
 
 Aqui, IntegracaoBanco é uma interface e pode receber várias implementações. Além disso, classe agora exige que uma dessas implementações seja passada no construtor.
 
