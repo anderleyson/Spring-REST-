@@ -1,6 +1,6 @@
 ## De volta aos estudos
 
-No curso de especialista em desenvolvimentos de API's REST em Spring, criarei um sistema de delivery, o AlgaFood.
+No curso de especialista em desenvolvimento de API's REST em Spring, criarei um sistema de delivery, o AlgaFood.
 
 
 <h4>Diagrama de classes do projeto:</h4> 
