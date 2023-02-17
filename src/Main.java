@@ -10,9 +10,9 @@ public class Main {
         Cliente joao = new Cliente("João", "joaoxerapo@gmail.com", "11996683439");
         Cliente maria = new Cliente("Maria Geme Grosso", "maria.boquetin@gmail.com", "11961670970");
 
-        Notificador notificador = new NotificadorSms();
+        Notificador notificado = new NotificadorSms();
 
-        AtivacaoClienteService ativacaoCliente = new AtivacaoClienteService(notificador);
+        AtivacaoClienteService ativacaoCliente = new AtivacaoClienteService(notificado);
         ativacaoCliente.ativar(joao);
         ativacaoCliente.ativar(maria);
     }
